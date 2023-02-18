@@ -26,11 +26,11 @@ The project consists of a custom PowerShell script to extract metadata from Wind
 <h2>Project walk-through:</h2>
 
 <p align="center">
-Virtual Machine Deployment (HoneyPot) <br/>
+Virtual Machine Deployment (HoneyPot VM) <br/>
 <img src="https://imgur.com/i72JdLm.png" height="55%" width="55%" alt="Virtual Machine Deployment"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+Creating Firewall Rules to Allow Any Trafict (HoneyPot VM) <br/>
 <img src="https://imgur.com/4Eq2vWm.png" height="55%" width="55%" alt="Creating Firewall Rules"/>
 <br />
 <br />
@@ -42,24 +42,24 @@ Microsoft Defender for Cloud Log Enviroment Created <br/>
 <img src="https://imgur.com/QMpvl11.png" height="55%" width="55%" alt="Microsoft Defender for Cloud Log Enviroment Created"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Activating Microsoft Defender and Cloud Security Posture Management <br/>
+<img src="https://imgur.com/CXiAPFD.png" height="55%" width="70%" alt="Activating Microsoft Defender and Cloud Security Posture Management"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Connecting the HoneyPot VM on Azure Dashboard <br/>
+<img src="https://imgur.com/VLKiK0l.png" height="55%" width="70%" alt="Connecting the HoneyPot VM on Azure Dashboard"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Using RDP to Connect with the HoneyPot VM <br/>
+<img src="https://imgur.com/x3crNFT.png" height="55%" width="70%" alt="Using RDP to Connect with the HoneyPot VM "/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Event Viewer Inside the HoneyPot VM <br/>
+<img src="https://imgur.com/F6w8b98.png" height="55%" width="70%" alt="Event Viewer Inside the HoneyPot VM"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Using the API to Get Geo Data<br/>
+<img src="https://imgur.com/H2qlWd5.png" height="55%" width="70%" alt="Using the API to extract Geo Data"/>
 <br />
 <br />
 Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
