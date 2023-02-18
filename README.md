@@ -26,15 +26,90 @@ The project consists of a custom PowerShell script to extract metadata from Wind
 <h2>Project walk-through:</h2>
 
 <p align="center">
-Launch Nessus and Select New Scan <br/>
-<img src="https://imgur.com/lyJTxJW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Virtual Machine Deployment (HoneyPot) <br/>
+<img src="https://imgur.com/i72JdLm.png" height="55%" width="55%" alt="Virtual Machine Deployment"/>
 <br />
 <br />
-Select Basic Network Scan  <br/>
-<img src="https://imgur.com/H4lvoAJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="55%" width="55%" alt="Creating Firewall Rules"/>
 <br />
 <br />
-
+Creating Log Analytics Workspace <br/>
+<img src="https://imgur.com/RB79w0D.png" height="55%" width="55%" alt="Creating Log Analytics Workspace"/>
+<br />
+<br />
+Microsoft Defender for Cloud Log Enviroment Created <br/>
+<img src="https://imgur.com/QMpvl11.png" height="55%" width="55%" alt="Microsoft Defender for Cloud Log Enviroment Created"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
+<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 </p>
 
 <!--
