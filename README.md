@@ -62,54 +62,43 @@ Using the API to Get Geo Data<br/>
 <img src="https://imgur.com/H2qlWd5.png" height="55%" width="70%" alt="Using the API to extract Geo Data"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Creating Custom PowerShell Script to extract Geo Data from the API and Create a Custom Log File <br/>
+<img src="https://imgur.com/vwBGfVz.png" height="60%" width="70%" alt="Creating Custom PowerShell Scrip to extract Geo Data from the API and Crear a Custom Log File"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Raw Data Extracted from the Custom Log <br/>
+<img src="https://imgur.com/BVv2BEp.png" height="70%" width="70%" alt="Raw Data Extracted from the Custom Log"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Creating a Custom Log (Log Analytics Workspace Azure) <br/>
+<img src="https://imgur.com/jgVateF.png" height="70%" width="70%" alt="Creating a Custom Log on Log Analytics Workspace (Azure)"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Creating Field Values <br/>
+<img src="https://imgur.com/ADphsax.png" height="55%" width="70%" alt="Creating Field Values"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Training AI with Raw Data from the Custom Log (Part 1) <br/>
+<img src="https://imgur.com/Yvfq1Ny.png" height="70%" width="70%" alt="Training AI with Raw Data from the Custom Log 1"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Training AI with Raw Data from the Custom Log (Part 2) <br/>
+<img src="https://imgur.com/JMbqjg9.png" height="70%" width="70%" alt="Training AI with Raw Data from the Custom Log 2"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Custom Log After Adding New Fields and AI Training <br/>
+<img src="https://imgur.com/jG4WSkP.png" height="70%" width="70%" alt="Custom Log After Adding New Fields and AI Training"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Creating Log Query <br/>
+<img src="https://imgur.com/CRGfvCw.png" height="70%" width="70%" alt="Creating Log Query"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+Hot Map Showing RDP Brute Force Attacks by Geolocation <br/>
+<img src="https://imgur.com/L4BeSkJ.png" height="70%" width="70%" alt="Hot Map Showing RDP Brute Force Attacks by Geolocation"/>
 <br />
 <br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Creating Firewall Rules to Allow Any Trafict to the Vulnerable VM <br/>
-<img src="https://imgur.com/4Eq2vWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+
 </p>
 
 <!--
