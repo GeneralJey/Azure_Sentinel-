@@ -24,32 +24,7 @@ The objective was to transform raw Windows security events into structured data 
 
 The following represents the logical data flow used in the project.
 
-```text
-Internet
-   |
-   v
-Azure Windows VM (Honeypot)
-   |
-   v
-Windows Event Viewer
-   |
-   v
-PowerShell Log Processing
-   |
-   +----> IP Geolocation API
-   |
-   v
-Enriched Custom Log File
-   |
-   v
-Azure Log Analytics Workspace
-   |
-   v
-Microsoft Sentinel
-   |
-   v
-Geographic Attack Visualization
-```
+![Microsoft Sentinel lab architecture — RDP monitoring and geolocation workflow](images/microsoft-sentinel-lab-architecture.png)
 
 ## Technologies Used
 
