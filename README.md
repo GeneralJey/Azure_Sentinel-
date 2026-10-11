@@ -1,214 +1,62 @@
 # Microsoft Sentinel SIEM Lab — RDP Attack Monitoring & Geolocation
 
-**Project Status:** Completed | Azure lab decommissioned
+**Focus:** Security event collection, enrichment, SIEM analysis, and visualization  
+**Tools:** Microsoft Azure, Windows 10, PowerShell, IP geolocation API, Log Analytics, Microsoft Sentinel, Microsoft Defender for Cloud  
+**Status:** Completed; Azure lab decommissioned
 
-**Category:** Security Operations (SOC) · Cloud Security · SIEM · Threat Monitoring
+## Objective
 
-## Project Overview
+Build a temporary Azure lab to collect Windows authentication activity associated with attempted RDP attacks, enrich source IP information with geographic metadata, ingest structured records into Azure Log Analytics, and visualize the activity in Microsoft Sentinel.
 
-This project demonstrates the deployment of a Microsoft Azure security monitoring lab to collect, enrich, analyze, and visualize Windows authentication activity associated with attempted Remote Desktop Protocol (RDP) attacks.
+The geographic view supported analysis of observed activity; it did not prove an attacker's identity, exact location, successful exploitation, or confirmed compromise.
 
-The lab used a Windows virtual machine configured as a temporary honeypot, a custom PowerShell script, an IP geolocation service, Azure Log Analytics, and Microsoft Sentinel.
+## Environment
 
-The objective was to transform raw Windows security events into structured data and visualize the geographic distribution of observed authentication attempts.
+| Component | Details |
+| --- | --- |
+| Cloud platform | Microsoft Azure |
+| Event source | Windows 10 virtual machine used as a temporary honeypot |
+| Event inspection | Windows Event Viewer |
+| Processing and enrichment | PowerShell and an IP geolocation API |
+| Log storage and queries | Azure Log Analytics |
+| Analysis and visualization | Microsoft Sentinel workbooks |
+| Additional security service | Microsoft Defender for Cloud |
+| Status | Lab decommissioned; screenshots preserve the historical walkthrough |
 
-**Key technical areas demonstrated:**
-- Azure virtual machine deployment and configuration
-- Windows security event analysis
-- PowerShell scripting and log processing
-- IP geolocation enrichment
-- Custom log ingestion into Azure Log Analytics
-- Microsoft Sentinel queries and workbook visualization
+## Implementation
 
-## Lab Architecture
+1. **Deploy the honeypot:** Created a Windows VM and configured inbound network access for the isolated RDP observation exercise.
+2. **Set up Azure services:** Created a Log Analytics workspace and reviewed Defender for Cloud configuration.
+3. **Inspect authentication events:** Connected to the VM and reviewed Windows Event Viewer records.
+4. **Enrich the event data:** Used PowerShell and an external geolocation service to associate source IP information with geographic metadata and prepare structured records.
+5. **Ingest and structure logs:** Configured custom log ingestion and field extraction in Log Analytics.
+6. **Analyze and visualize:** Queried the resulting data and built a Microsoft Sentinel workbook view of geographic authentication activity.
 
-The following represents the logical data flow used in the project.
+The lab used permissive inbound rules as part of the honeypot experiment. Broad RDP exposure increases risk and should not be used for production systems. Geolocation is approximate and can be affected by VPNs, proxies, or compromised intermediary systems.
 
-![Microsoft Sentinel lab architecture — RDP monitoring and geolocation workflow](images/microsoft-sentinel-lab-architecture.png)
+## Evidence
 
-## Technologies Used
+The logical data flow is shown in [images/microsoft-sentinel-lab-architecture.png](images/microsoft-sentinel-lab-architecture.png). The following historical screenshots are linked in the repository README:
 
-| Technology | Purpose |
-|---|---|
-| Microsoft Azure | Cloud infrastructure hosting |
-| Windows 10 VM | Honeypot and security event source |
-| Windows Event Viewer | Authentication event analysis |
-| PowerShell | Event processing and enrichment |
-| IP Geolocation API | Geographic metadata lookup |
-| Azure Log Analytics | Centralized log ingestion and querying |
-| Microsoft Sentinel | Security monitoring and visualization |
-| Microsoft Defender for Cloud | Cloud security configuration and visibility |
+- Azure VM deployment — [VM deployment](https://imgur.com/i72JdLm.png), [firewall configuration](https://imgur.com/4Eq2vWm.png), and [VM dashboard](https://imgur.com/VLKiK0l.png).
+- Azure security services — [Log Analytics workspace](https://imgur.com/RB79w0D.png), [Defender for Cloud environment](https://imgur.com/QMpvl11.png), and [security posture settings](https://imgur.com/CXiAPFD.png).
+- Windows event collection — [RDP connection](https://imgur.com/x3crNFT.png) and [Windows security events](https://imgur.com/F6w8b98.png).
+- Enrichment and processing — [geolocation API](https://imgur.com/H2qlWd5.png), [PowerShell event processing](https://imgur.com/vwBGfVz.png), and [generated custom log](https://imgur.com/BVv2BEp.png).
+- Ingestion and field extraction — [custom log ingestion](https://imgur.com/jgVateF.png), [custom log fields](https://imgur.com/ADphsax.png), [field extraction part 1](https://imgur.com/Yvfq1Ny.png), [field extraction part 2](https://imgur.com/JMbqjg9.png), and [enriched log data](https://imgur.com/jG4WSkP.png).
+- Analysis — [log query](https://imgur.com/CRGfvCw.png) and [Sentinel geographic visualization](https://imgur.com/L4BeSkJ.png).
 
-## Implementation Walkthrough
-
-### Phase 1 — Deploy the Azure Honeypot
-
-Deployed a Windows virtual machine in Microsoft Azure to generate and observe security events associated with internet-exposed RDP access.
-
-The virtual machine was used exclusively for a temporary security research lab.
-
-**1. Deploy the virtual machine**
-
-![Azure virtual machine deployment](https://imgur.com/i72JdLm.png)
-
-**2. Configure network access**
-
-Configured permissive inbound firewall rules as part of the isolated honeypot experiment.
-
-![Azure firewall configuration](https://imgur.com/4Eq2vWm.png)
-
-**Security consideration:** Broadly exposing RDP increases the risk of unauthorized access. This configuration should not be used for production systems. Production environments should restrict management access through approved secure access methods, such as VPNs or managed administrative services.
-
-### Phase 2 — Configure Azure Security Services
-
-Created the Log Analytics workspace and reviewed Microsoft Defender for Cloud configuration.
-
-**3. Create a Log Analytics workspace**
-
-![Log Analytics workspace](https://imgur.com/RB79w0D.png)
-
-**4. Configure the cloud security environment**
-
-![Defender for Cloud environment](https://imgur.com/QMpvl11.png)
-
-**5. Review security posture management settings**
-
-![Defender for Cloud configuration](https://imgur.com/CXiAPFD.png)
-
-**6. Verify the Azure virtual machine**
-
-![Azure virtual machine dashboard](https://imgur.com/VLKiK0l.png)
-
-### Phase 3 — Examine Windows Authentication Events
-
-Connected to the Windows virtual machine and reviewed events recorded by the operating system.
-
-**7. Access the virtual machine through RDP**
-
-![Remote Desktop connection](https://imgur.com/x3crNFT.png)
-
-**8. Inspect Windows Event Viewer**
-
-![Windows security events](https://imgur.com/F6w8b98.png)
-
-The Windows event logs provided the source information used for subsequent processing and visualization.
-
-### Phase 4 — Enrich Security Events Using PowerShell
-
-Developed a log-processing workflow using PowerShell and an external geolocation service.
-
-The workflow associated source IP information with geographic metadata and prepared structured log records for ingestion into Azure.
-
-**9. Retrieve IP geolocation information**
-
-![IP geolocation API](https://imgur.com/H2qlWd5.png)
-
-**10. Process event information with PowerShell**
-
-![PowerShell event processing](https://imgur.com/vwBGfVz.png)
-
-**11. Examine the generated custom log**
-
-![Custom security log](https://imgur.com/BVv2BEp.png)
-
-**Technical note:** IP geolocation is approximate and does not establish an attacker's physical identity or precise location. VPNs, proxies, and compromised systems can affect the apparent origin of activity.
-
-### Phase 5 — Ingest and Structure Logs in Azure
-
-Configured custom log ingestion and field extraction to make the enriched data usable for analysis.
-
-**12. Create the custom log in Log Analytics**
-
-![Custom log ingestion](https://imgur.com/jgVateF.png)
-
-**13. Configure structured fields**
-
-![Custom log fields](https://imgur.com/ADphsax.png)
-
-**14. Configure field extraction — Part 1**
-
-![Field extraction configuration part one](https://imgur.com/Yvfq1Ny.png)
-
-**15. Configure field extraction — Part 2**
-
-![Field extraction configuration part two](https://imgur.com/JMbqjg9.png)
-
-**16. Review the enriched log data**
-
-![Enriched log data](https://imgur.com/jG4WSkP.png)
-
-This phase demonstrates how raw security information can be transformed into structured records for centralized analysis.
-
-### Phase 6 — Analyze and Visualize Security Activity
-
-Used Azure log queries and a Microsoft Sentinel workbook to visualize the geographic distribution of observed authentication activity.
-
-**17. Create the log query**
-
-![Log query](https://imgur.com/CRGfvCw.png)
-
-**18. Visualize RDP authentication activity geographically**
-
-![Microsoft Sentinel geographic visualization](https://imgur.com/L4BeSkJ.png)
-
-The resulting visualization provided a geographic overview of observed activity based on enriched source IP information.
-
-## Results and Observations
-
-The lab demonstrated a functioning workflow for:
-
-- Collecting Windows security event information.
-- Processing event data with PowerShell.
-- Enriching IP addresses with geographic metadata.
-- Ingesting custom records into Azure Log Analytics.
-- Querying the resulting dataset.
-- Visualizing authentication activity in Microsoft Sentinel.
-
-The geographic visualization supported investigation of activity patterns, but it did not independently prove the identity of attackers, successful exploitation, or confirmed compromise.
-
-No attack-prevention or incident-response effectiveness metrics are claimed for this project.
-
-## Security Considerations
-
-This experiment used a deliberately exposed system to observe potentially malicious authentication attempts.
-
-For a production environment, appropriate safeguards would include:
-
-- Restricting inbound RDP access.
-- Requiring strong authentication and appropriate administrative access controls.
-- Applying operating system and application updates.
-- Monitoring authentication activity.
-- Using network segmentation and least-privilege policies.
-- Establishing incident response and recovery procedures.
-
-The temporary Azure lab was subsequently decommissioned.
+The Azure environment is no longer active. The screenshots preserve the historical implementation walkthrough; this repository documents a portfolio lab, not a live monitoring service. No attack-prevention or incident-response effectiveness metrics are claimed.
 
 ## Lessons Learned
 
-This project provided practical experience with:
+- Windows event data can be processed and enriched before centralized analysis.
+- Custom logs need structured fields to support useful querying and visualization.
+- Geolocation adds investigative context but cannot establish a person's identity or precise location.
+- Exposing cloud-hosted RDP has operational risk; production management access should be restricted and protected.
+- A visualization supports investigation but does not, on its own, confirm compromise.
 
-**Security event collection:** Understanding how Windows records authentication-related activity.
+## Next Steps
 
-**Log enrichment:** Using PowerShell and external data sources to add investigative context.
-
-**SIEM engineering:** Preparing, ingesting, and querying custom security logs.
-
-**Security visualization:** Presenting event data through Microsoft Sentinel workbooks.
-
-**Cloud security:** Understanding the operational and security implications of exposing cloud-hosted services.
-
-**Threat analysis:** Recognizing the limitations of geolocation data and distinguishing suspicious activity from confirmed security incidents.
-
-## Project Status and Evidence
-
-**Status:** Completed — Lab decommissioned.
-
-The original Azure environment is no longer running. The screenshots in this repository preserve the historical implementation walkthrough.
-
-The project is maintained as a technical portfolio case study rather than an active security monitoring service.
-
----
-
-**Author:** Jermaine Faltine
-
-[GitHub Profile](https://github.com/GeneralJey) | [LinkedIn](https://www.linkedin.com/in/jermaine-faltine/)
+- Add the PowerShell processing script and representative sanitized sample records if they can be shared safely.
+- Document the custom schema, ingestion assumptions, and example queries so the workflow can be reproduced.
+- Extend the case study with alerting and response validation only if those capabilities are implemented and documented.
